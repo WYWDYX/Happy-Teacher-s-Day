@@ -39,7 +39,7 @@ h2 {
     color: #6a5acd;
 }
 
-.images img {
+.images iframe {
     max-width: 100%;
     height: auto;
     display: block;
@@ -49,7 +49,7 @@ h2 {
     transition: transform 0.3s;
 }
 
-.images img:hover {
+.images iframe:hover {
     transform: scale(1.05);
 }
 
