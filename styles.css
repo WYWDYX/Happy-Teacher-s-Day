@@ -15,6 +15,10 @@ body {
 .header {
     text-align: center;
     margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffefdb;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .main-content {
@@ -27,6 +31,7 @@ h1 {
     color: #2e8b57;
     font-size: 2.5em;
     margin-bottom: 0.5em;
+    animation: fadeIn 2s ease-in-out;
 }
 
 h2 {
@@ -39,6 +44,13 @@ h2 {
     height: auto;
     display: block;
     margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.images img:hover {
+    transform: scale(1.05);
 }
 
 .message, .quote, .guestbook {
@@ -47,6 +59,7 @@ h2 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-bottom: 20px;
+    animation: slideUp 1s ease-out;
 }
 
 blockquote {
@@ -79,6 +92,13 @@ button:hover {
     background-color: #3cb371;
 }
 
+.footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    color: #777;
+}
+
 @media screen and (max-width: 600px) {
     h1 {
         font-size: 2em;
@@ -86,4 +106,14 @@ button:hover {
     .main-content {
         padding: 5px;
     }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
